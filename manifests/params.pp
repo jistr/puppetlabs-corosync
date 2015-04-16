@@ -15,6 +15,10 @@ class corosync::params {
   $packages                            = ['corosync', 'pacemaker']
   $token                               = 3000
   $token_retransmits_before_lost_const = 10
+  $hacluster_user                      = 'hacluster'
+  $pcs_auth_timeout                    = 30
+  $pcs_auth_tries                      = 30
+  $pcs_auth_try_sleep                  = 10
 
   case $::osfamily {
     'RedHat': {
